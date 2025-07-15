@@ -10,6 +10,7 @@ build:
       value: '8080'
 
 run:
-  command: python main.py # command to run fastapi
+  command: uvicorn main:app --host 0.0.0.0 --port 8080
+  # command: python main.py # command to run fastapi
   network:
     port: 8080 # port AppRunner will expose
